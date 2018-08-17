@@ -34,8 +34,10 @@ class App extends Component {
     scanner.addListener('scan', content => {
       // Scanned content
       let parsedData = content;
+      let isVCard = false;
 
       if (content.startsWith('BEGIN:VCARD')) {
+        isVCard = true;
         parsedData = new vCard().parse(content).data;
         Object.keys(parsedData).forEach(key => {
           parsedData[key] = parsedData[key]._data;
@@ -61,7 +63,11 @@ class App extends Component {
             modalIsOpen: true
           });
           // Update this to window.location.href
-          window.location.href = 'https://goo.gl/forms/zVKEP439dQt3Ln163';
+          window.location.href = `https://docs.google.com/forms/d/e/1FAIpQLScTrv_HFyhoCPL4QEJgjeYXjgtDngxSwSypJ0jv_8w9gZSFcg/viewform?usp=pp_url&entry.1482898844=${
+            isVCard ? parsedData.fn : ''
+          }&entry.603592442=${isVCard ? parsedData.email : ''}&entry.77762339=${
+            isVCard ? parsedData.tel : ''
+          }&entry.650067583=${isVCard ? parsedData.org : ''}`;
         })
         .catch(error => {
           // Failed
