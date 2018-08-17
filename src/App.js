@@ -1,5 +1,4 @@
 import React, { Component, createRef, Fragment } from "react";
-import * as Instascan from "instascan";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import Modal from "react-modal";
@@ -26,7 +25,7 @@ class App extends Component {
   }
   componentDidMount() {
     // Initialize the scanner
-    let scanner = new Instascan.Scanner({
+    let scanner = new window.Instascan.Scanner({
       video: this.videoRef.current
     });
 
@@ -50,7 +49,7 @@ class App extends Component {
             modalIsOpen: true
           });
           // Update this to window.location.href
-          window.location.href = "/";
+          window.location.href = "https://goo.gl/forms/zVKEP439dQt3Ln163";
         })
         .catch(error => {
           // Failed
@@ -65,7 +64,7 @@ class App extends Component {
         });
     });
 
-    Instascan.Camera.getCameras()
+    window.Instascan.Camera.getCameras()
       .then(function(cameras) {
         if (cameras.length > 0) {
           scanner.start(cameras[0]);
