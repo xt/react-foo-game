@@ -59,7 +59,7 @@ class App extends Component {
             showError: false,
             errorMsg: '',
             showSuccess: true,
-            successMsg: 'Document written with ID: ' + docRef.id,
+            successMsg: 'Connected to Quiz Portal!',
             modalIsOpen: true
           });
           // Update this to window.location.href
