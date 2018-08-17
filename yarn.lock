@@ -1430,7 +1430,7 @@ camelcase@^2.0.0, camelcase@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
 
-camelcase@^3.0.0:
+camelcase@^3.0.0, camelcase@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
@@ -2971,6 +2971,10 @@ flat-cache@^1.2.1:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
+
+foldline@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/foldline/-/foldline-1.0.1.tgz#c8d32cd7b17e6e11aa72813fe493474404a7c628"
 
 follow-redirects@^1.0.0:
   version "1.5.5"
@@ -7117,6 +7121,13 @@ validate-npm-package-license@^3.0.1:
 vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
+
+vcf@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/vcf/-/vcf-2.0.1.tgz#7e16e51ca67aa3f2917137f01d40ccde18fab4f6"
+  dependencies:
+    camelcase "~3.0.0"
+    foldline "~1.0.0"
 
 vendors@^1.0.0:
   version "1.0.2"
